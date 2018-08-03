@@ -49,5 +49,18 @@ trait AntiFraudeTransactionService
 
         return $this->brasPagAntiFraudeClient->fraudAnalysisTransactionDetails($fraudAnalysisTransactionDetailsRequest);
     }
+    
+    /**
+	 * [log description]
+	 * @return [array] [retorna o request e reponse da action chamada]
+	 */
+	public function logAntiFraude()
+	{
+		return [
+			'request' => $this->brasPagAntiFraudeClient->xmlRequest,
+			'reponse' => $this->brasPagAntiFraudeClient->xmlReponse,
+		];
+	}
+
 
 }
