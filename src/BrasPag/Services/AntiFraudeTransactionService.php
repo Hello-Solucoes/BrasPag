@@ -58,7 +58,7 @@ trait AntiFraudeTransactionService
 	{
 		return [
 			'request' => $this->brasPagAntiFraudeClient->xmlRequest,
-			'reponse' => $this->brasPagAntiFraudeClient->xmlReponse,
+			'response' => $this->brasPagAntiFraudeClient->xmlReponse,
 		];
 	}
 
