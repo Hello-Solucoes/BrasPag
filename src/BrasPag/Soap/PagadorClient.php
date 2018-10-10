@@ -18,7 +18,7 @@ class PagadorClient extends Client
 	 * [$homologacaoEndPoint url para o ambiente de homologação]
 	 * @var string
 	 */
-	private $homologacaoEndPoint = 'https://homologacao.pagador.com.br/webservice/pagadorTransaction.asmx?WSDL';
+	private $homologacaoEndPoint = 'https://transactionsandbox.pagador.com.br/webservice/pagadortransaction.asmx?WSDL';
 
 	function __construct($options = [], $envProducation = true)
 	{
