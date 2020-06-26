@@ -1,5 +1,5 @@
 {
-    "name": "ehtl-composer-deps/bras-pag",
+    "name": "hello-solucoes/bras-pag",
     "type": "library",
     "description": "Projeto para se comunicar com o soap da BrasPag",
     "keywords": ["Pagamentos", "Cartão de Credito", "Bras Pag"],
