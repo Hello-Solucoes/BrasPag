@@ -168,7 +168,8 @@ class AntiFraudRequestFactory
      */
     private function makeDecisionManagerData()
     {
-        return (new TravelDataFactory($this->AntiFraudRequest->getDecisionManagerData()->getTravelData()))->make();
+        $travelData = new TravelDataFactory($this->AntiFraudRequest->getDecisionManagerData()->getTravelData());
+        return $travelData->make();
     }
 
     /**

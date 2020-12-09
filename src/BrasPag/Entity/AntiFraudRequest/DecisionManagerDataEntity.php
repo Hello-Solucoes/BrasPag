@@ -14,9 +14,9 @@ class DecisionManagerDataEntity implements DecisionManagerDataContracts
 {
 
     /**
-     * @var array
+     * @var TravelDataContracts
      */
-    private $travelData = [];
+    private $travelData;
 
     /**
      * @param TravelDataContracts $travelData
@@ -24,14 +24,15 @@ class DecisionManagerDataEntity implements DecisionManagerDataContracts
      */
     public function setTravelData(TravelDataContracts $travelData)
     {
-        return $this->travelData[] = $travelData;
+        return $this->travelData = $travelData;
     }
 
+
     /**
-     * @return mixed
+     * @return TravelDataContracts|array|mixed
      */
     public function getTravelData()
     {
-        return $this->travelData;
+        return $this->travelData ?: array();
     }
 }
