@@ -40,4 +40,37 @@ class TravelDataEntity implements TravelDataContracts
         $this->travelLegDataCollection = $travelLegDataCollection;
         return $this;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getCompleteRoute()
+    {
+        return $this->completeRoute;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDepartureDateTime()
+    {
+        return $this->departureDateTime;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getJourneyType()
+    {
+        return $this->journeyType;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getTravelLegDataCollection()
+    {
+        return $this->travelLegDataCollection;
+    }
+
 }
