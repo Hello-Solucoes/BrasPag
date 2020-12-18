@@ -33,7 +33,7 @@ class TravelDataFactory
     {
         $travelData = new stdClass;
         $travelData->CompleteRoute = $this->travelData->getCompleteRoute();
-        $travelData->DepartureDateTime = $this->travelData->getDepartureDateTime();
+        $travelData->DepartureDateTime = date('c', strtotime($this->travelData->getDepartureDateTime()));
         $travelData->JourneyType = $this->travelData->getJourneyType();
         $travelData->TravelLegDataCollection = $this->makeTravelLegDataCollection();
 
@@ -47,8 +47,8 @@ class TravelDataFactory
     private function makeTravelLegDataCollection()
     {
         $travelLegDataCollection = new stdClass;
-
-        if (!is_null($this->travelData->getTravelLegDataCollection()->getTravelLegData())) {
+        $travelLegDataEntity = $this->travelData->getTravelLegDataCollection();
+        if (!is_null($travelLegDataEntity) && !is_null($travelLegDataEntity->getTravelLegData())) {
             $travelLegDatas = $this->travelData->getTravelLegDataCollection()->getTravelLegData();
             foreach ($travelLegDatas as $travelLegData){
                 $travelLegDataCollection->TravelLegDataCollection[] = (new TravelLegDataFactory($travelLegData))->make();
